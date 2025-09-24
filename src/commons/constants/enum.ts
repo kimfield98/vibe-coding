@@ -33,32 +33,32 @@ export interface EmotionProperties {
 export const EmotionData: Record<EmotionType, EmotionProperties> = {
   [Emotion.HAPPY]: {
     text: '행복해요',
-    imageM: 'emotion-happy-m.svg',
-    imageS: 'emotion-happy-s.svg',
+    imageM: 'emotion-happy-m.svg', // icons 폴더의 svg 파일
+    imageS: 'emotion-happy-s.png', // images 폴더의 png 파일 (small 사이즈)
     color: red[60], // red60
   },
   [Emotion.SAD]: {
     text: '슬퍼요',
     imageM: 'emotion-sad-m.svg',
-    imageS: 'emotion-sad-s.svg',
+    imageS: 'emotion-sad-s.png',
     color: blue[60], // blue60
   },
   [Emotion.ANGRY]: {
     text: '화나요',
     imageM: 'emotion-angry-m.svg',
-    imageS: 'emotion-angry-s.svg',
+    imageS: 'emotion-angry-s.png',
     color: gray[60], // gray60
   },
   [Emotion.SURPRISE]: {
     text: '놀랐어요',
     imageM: 'emotion-surprise-m.svg',
-    imageS: 'emotion-surprise-s.svg',
+    imageS: 'emotion-surprise-s.png',
     color: yellow[60], // yellow60
   },
   [Emotion.ETC]: {
     text: '기타',
     imageM: 'emotion-etc-m.svg',
-    imageS: 'emotion-etc-s.svg',
+    imageS: 'emotion-etc-s.png',
     color: green[60], // green60
   },
 } as const;
@@ -95,10 +95,13 @@ export const getEmotionColor = (emotion: EmotionType): string => {
 
 /**
  * 감정 타입에 따른 전체 이미지 경로를 반환 (public 기준)
+ * M 사이즈: /icons/ 폴더의 svg 파일
+ * S 사이즈: /images/ 폴더의 png 파일
  */
 export const getEmotionImagePath = (emotion: EmotionType, size: 'M' | 'S' = 'M'): string => {
   const imageName = size === 'M' ? getEmotionImageM(emotion) : getEmotionImageS(emotion);
-  return `/icons/${imageName}`;
+  const folder = size === 'M' ? 'icons' : 'images';
+  return `/${folder}/${imageName}`;
 };
 
 /**
