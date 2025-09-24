@@ -235,11 +235,193 @@
   --color-gradient-skeleton: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.6) 48.5%, transparent 100%);
 }
 
+/**
+ * Typography Design System - CSS Custom Properties
+ * 피그마 파운데이션에서 정의된 Typography 토큰을 CSS 변수로 구현
+ * 모바일/데스크톱 분기 및 한국어/영문 분기 지원
+ */
+
+:root {
+  /* ===== TYPOGRAPHY FONT FAMILIES ===== */
+  --typo-font-korean: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --typo-font-english: 'SUIT Variable', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --typo-font-system: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+
+  /* ===== TYPOGRAPHY WEIGHTS ===== */
+  --typo-weight-regular: 400;
+  --typo-weight-medium: 500;
+  --typo-weight-semibold: 600;
+  --typo-weight-bold: 700;
+  --typo-weight-extrabold: 800;
+
+  /* ===== WEB HEADLINE TYPOGRAPHY - DESKTOP ===== */
+  --typo-web-headline-headline01-font-family: var(--typo-font-korean);
+  --typo-web-headline-headline01-font-size: 48px;
+  --typo-web-headline-headline01-font-weight: var(--typo-weight-semibold);
+  --typo-web-headline-headline01-line-height: 60px;
+  --typo-web-headline-headline01-letter-spacing: 0;
+
+  --typo-web-headline-headline02-font-family: var(--typo-font-korean);
+  --typo-web-headline-headline02-font-size: 36px;
+  --typo-web-headline-headline02-font-weight: var(--typo-weight-semibold);
+  --typo-web-headline-headline02-line-height: 48px;
+  --typo-web-headline-headline02-letter-spacing: 0;
+
+  --typo-web-headline-headline03-font-family: var(--typo-font-korean);
+  --typo-web-headline-headline03-font-size: 28px;
+  --typo-web-headline-headline03-font-weight: var(--typo-weight-semibold);
+  --typo-web-headline-headline03-line-height: 36px;
+  --typo-web-headline-headline03-letter-spacing: 0;
+
+  /* ===== HEADLINE TYPOGRAPHY - DESKTOP ===== */
+  --typo-headline-headline01-font-family: var(--typo-font-korean);
+  --typo-headline-headline01-font-size: 24px;
+  --typo-headline-headline01-font-weight: var(--typo-weight-bold);
+  --typo-headline-headline01-line-height: 32px;
+  --typo-headline-headline01-letter-spacing: 0;
+
+  --typo-headline-headline02-font-family: var(--typo-font-korean);
+  --typo-headline-headline02-font-size: 22px;
+  --typo-headline-headline02-font-weight: var(--typo-weight-extrabold);
+  --typo-headline-headline02-line-height: 30px;
+  --typo-headline-headline02-letter-spacing: 0;
+
+  --typo-headline-headline03-font-family: var(--typo-font-korean);
+  --typo-headline-headline03-font-size: 20px;
+  --typo-headline-headline03-font-weight: var(--typo-weight-bold);
+  --typo-headline-headline03-line-height: 28px;
+  --typo-headline-headline03-letter-spacing: 0;
+
+  /* ===== TITLE TYPOGRAPHY - DESKTOP ===== */
+  --typo-title-title01-font-family: var(--typo-font-korean);
+  --typo-title-title01-font-size: 18px;
+  --typo-title-title01-font-weight: var(--typo-weight-bold);
+  --typo-title-title01-line-height: 24px;
+  --typo-title-title01-letter-spacing: 0;
+
+  --typo-title-title02-font-family: var(--typo-font-korean);
+  --typo-title-title02-font-size: 16px;
+  --typo-title-title02-font-weight: var(--typo-weight-bold);
+  --typo-title-title02-line-height: 22px;
+  --typo-title-title02-letter-spacing: 0;
+
+  --typo-title-title03-font-family: var(--typo-font-korean);
+  --typo-title-title03-font-size: 14px;
+  --typo-title-title03-font-weight: var(--typo-weight-bold);
+  --typo-title-title03-line-height: 20px;
+  --typo-title-title03-letter-spacing: 0;
+
+  --typo-title-subtitle01-font-family: var(--typo-font-korean);
+  --typo-title-subtitle01-font-size: 14px;
+  --typo-title-subtitle01-font-weight: var(--typo-weight-semibold);
+  --typo-title-subtitle01-line-height: 22px;
+  --typo-title-subtitle01-letter-spacing: 0;
+
+  --typo-title-subtitle02-font-family: var(--typo-font-korean);
+  --typo-title-subtitle02-font-size: 12px;
+  --typo-title-subtitle02-font-weight: var(--typo-weight-semibold);
+  --typo-title-subtitle02-line-height: 18px;
+  --typo-title-subtitle02-letter-spacing: 0;
+
+  /* ===== BODY TYPOGRAPHY - DESKTOP ===== */
+  --typo-body-body01-font-family: var(--typo-font-korean);
+  --typo-body-body01-font-size: 16px;
+  --typo-body-body01-font-weight: var(--typo-weight-medium);
+  --typo-body-body01-line-height: 24px;
+  --typo-body-body01-letter-spacing: 0;
+
+  --typo-body-body02-m-font-family: var(--typo-font-korean);
+  --typo-body-body02-m-font-size: 14px;
+  --typo-body-body02-m-font-weight: var(--typo-weight-medium);
+  --typo-body-body02-m-line-height: 22px;
+  --typo-body-body02-m-letter-spacing: 0;
+
+  --typo-body-body03-font-family: var(--typo-font-korean);
+  --typo-body-body03-font-size: 12px;
+  --typo-body-body03-font-weight: var(--typo-weight-medium);
+  --typo-body-body03-line-height: 18px;
+  --typo-body-body03-letter-spacing: 0;
+
+  --typo-body-body01-regular-font-family: var(--typo-font-korean);
+  --typo-body-body01-regular-font-size: 16px;
+  --typo-body-body01-regular-font-weight: var(--typo-weight-regular);
+  --typo-body-body01-regular-line-height: 22px;
+  --typo-body-body01-regular-letter-spacing: 0;
+
+  --typo-body-body02-s-font-family: var(--typo-font-korean);
+  --typo-body-body02-s-font-size: 14px;
+  --typo-body-body02-s-font-weight: var(--typo-weight-regular);
+  --typo-body-body02-s-line-height: 20px;
+  --typo-body-body02-s-letter-spacing: 0;
+
+  --typo-body-body03-regular-font-family: var(--typo-font-korean);
+  --typo-body-body03-regular-font-size: 12px;
+  --typo-body-body03-regular-font-weight: var(--typo-weight-regular);
+  --typo-body-body03-regular-line-height: 16px;
+  --typo-body-body03-regular-letter-spacing: 0;
+
+  /* ===== CAPTION TYPOGRAPHY - DESKTOP ===== */
+  --typo-caption-caption01-font-family: var(--typo-font-korean);
+  --typo-caption-caption01-font-size: 12px;
+  --typo-caption-caption01-font-weight: var(--typo-weight-semibold);
+  --typo-caption-caption01-line-height: 14px;
+  --typo-caption-caption01-letter-spacing: 0;
+
+  --typo-caption-caption02-m-font-family: var(--typo-font-korean);
+  --typo-caption-caption02-m-font-size: 10px;
+  --typo-caption-caption02-m-font-weight: var(--typo-weight-semibold);
+  --typo-caption-caption02-m-line-height: 12px;
+  --typo-caption-caption02-m-letter-spacing: 0;
+
+  --typo-caption-caption02-s-font-family: var(--typo-font-korean);
+  --typo-caption-caption02-s-font-size: 10px;
+  --typo-caption-caption02-s-font-weight: var(--typo-weight-medium);
+  --typo-caption-caption02-s-line-height: 12px;
+  --typo-caption-caption02-s-letter-spacing: 0;
+
+  --typo-caption-caption03-font-family: var(--typo-font-korean);
+  --typo-caption-caption03-font-size: 8px;
+  --typo-caption-caption03-font-weight: var(--typo-weight-semibold);
+  --typo-caption-caption03-line-height: 10px;
+  --typo-caption-caption03-letter-spacing: 0;
+
+  /* ===== ENGLISH TYPOGRAPHY VARIANTS ===== */
+  --typo-english-web-headline-headline01-font-family: var(--typo-font-english);
+  --typo-english-web-headline-headline01-font-size: 48px;
+  --typo-english-web-headline-headline01-font-weight: var(--typo-weight-semibold);
+  --typo-english-web-headline-headline01-line-height: 60px;
+  --typo-english-web-headline-headline01-letter-spacing: 0;
+
+  --typo-english-web-headline-headline02-font-family: var(--typo-font-english);
+  --typo-english-web-headline-headline02-font-size: 36px;
+  --typo-english-web-headline-headline02-font-weight: var(--typo-weight-semibold);
+  --typo-english-web-headline-headline02-line-height: 48px;
+  --typo-english-web-headline-headline02-letter-spacing: 0;
+
+  --typo-english-web-headline-headline03-font-family: var(--typo-font-english);
+  --typo-english-web-headline-headline03-font-size: 28px;
+  --typo-english-web-headline-headline03-font-weight: var(--typo-weight-semibold);
+  --typo-english-web-headline-headline03-line-height: 36px;
+  --typo-english-web-headline-headline03-letter-spacing: 0;
+}
+
+/* ===== MOBILE TYPOGRAPHY OVERRIDES ===== */
+@media (max-width: 767px) {
+  :root {
+    /* 모바일에서는 현재 동일한 값을 사용하지만, 필요시 다른 값으로 변경 가능 */
+    /* 예시: 모바일에서 더 작은 폰트 사이즈 사용하고 싶은 경우 */
+    /*
+    --typo-web-headline-headline01-font-size: 40px;
+    --typo-web-headline-headline01-line-height: 52px;
+    */
+  }
+}
+
 /* ===== BASE STYLES ===== */
 body {
   color: var(--color-text-primary);
   background: var(--color-bg-primary);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--typo-font-korean);
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
@@ -334,6 +516,211 @@ body {
   
   .bg-yellow-30 { background-color: var(--color-yellow-30); }
   .bg-yellow-40 { background-color: var(--color-yellow-40); }
+
+  /* ===== TYPOGRAPHY UTILITY CLASSES ===== */
+  
+  /* Web Headline Typography */
+  .typo-web-headline-01 {
+    font-family: var(--typo-web-headline-headline01-font-family);
+    font-size: var(--typo-web-headline-headline01-font-size);
+    font-weight: var(--typo-web-headline-headline01-font-weight);
+    line-height: var(--typo-web-headline-headline01-line-height);
+    letter-spacing: var(--typo-web-headline-headline01-letter-spacing);
+  }
+  
+  .typo-web-headline-02 {
+    font-family: var(--typo-web-headline-headline02-font-family);
+    font-size: var(--typo-web-headline-headline02-font-size);
+    font-weight: var(--typo-web-headline-headline02-font-weight);
+    line-height: var(--typo-web-headline-headline02-line-height);
+    letter-spacing: var(--typo-web-headline-headline02-letter-spacing);
+  }
+  
+  .typo-web-headline-03 {
+    font-family: var(--typo-web-headline-headline03-font-family);
+    font-size: var(--typo-web-headline-headline03-font-size);
+    font-weight: var(--typo-web-headline-headline03-font-weight);
+    line-height: var(--typo-web-headline-headline03-line-height);
+    letter-spacing: var(--typo-web-headline-headline03-letter-spacing);
+  }
+
+  /* Headline Typography */
+  .typo-headline-01 {
+    font-family: var(--typo-headline-headline01-font-family);
+    font-size: var(--typo-headline-headline01-font-size);
+    font-weight: var(--typo-headline-headline01-font-weight);
+    line-height: var(--typo-headline-headline01-line-height);
+    letter-spacing: var(--typo-headline-headline01-letter-spacing);
+  }
+  
+  .typo-headline-02 {
+    font-family: var(--typo-headline-headline02-font-family);
+    font-size: var(--typo-headline-headline02-font-size);
+    font-weight: var(--typo-headline-headline02-font-weight);
+    line-height: var(--typo-headline-headline02-line-height);
+    letter-spacing: var(--typo-headline-headline02-letter-spacing);
+  }
+  
+  .typo-headline-03 {
+    font-family: var(--typo-headline-headline03-font-family);
+    font-size: var(--typo-headline-headline03-font-size);
+    font-weight: var(--typo-headline-headline03-font-weight);
+    line-height: var(--typo-headline-headline03-line-height);
+    letter-spacing: var(--typo-headline-headline03-letter-spacing);
+  }
+
+  /* Title Typography */
+  .typo-title-01 {
+    font-family: var(--typo-title-title01-font-family);
+    font-size: var(--typo-title-title01-font-size);
+    font-weight: var(--typo-title-title01-font-weight);
+    line-height: var(--typo-title-title01-line-height);
+    letter-spacing: var(--typo-title-title01-letter-spacing);
+  }
+  
+  .typo-title-02 {
+    font-family: var(--typo-title-title02-font-family);
+    font-size: var(--typo-title-title02-font-size);
+    font-weight: var(--typo-title-title02-font-weight);
+    line-height: var(--typo-title-title02-line-height);
+    letter-spacing: var(--typo-title-title02-letter-spacing);
+  }
+  
+  .typo-title-03 {
+    font-family: var(--typo-title-title03-font-family);
+    font-size: var(--typo-title-title03-font-size);
+    font-weight: var(--typo-title-title03-font-weight);
+    line-height: var(--typo-title-title03-line-height);
+    letter-spacing: var(--typo-title-title03-letter-spacing);
+  }
+  
+  .typo-subtitle-01 {
+    font-family: var(--typo-title-subtitle01-font-family);
+    font-size: var(--typo-title-subtitle01-font-size);
+    font-weight: var(--typo-title-subtitle01-font-weight);
+    line-height: var(--typo-title-subtitle01-line-height);
+    letter-spacing: var(--typo-title-subtitle01-letter-spacing);
+  }
+  
+  .typo-subtitle-02 {
+    font-family: var(--typo-title-subtitle02-font-family);
+    font-size: var(--typo-title-subtitle02-font-size);
+    font-weight: var(--typo-title-subtitle02-font-weight);
+    line-height: var(--typo-title-subtitle02-line-height);
+    letter-spacing: var(--typo-title-subtitle02-letter-spacing);
+  }
+
+  /* Body Typography */
+  .typo-body-01 {
+    font-family: var(--typo-body-body01-font-family);
+    font-size: var(--typo-body-body01-font-size);
+    font-weight: var(--typo-body-body01-font-weight);
+    line-height: var(--typo-body-body01-line-height);
+    letter-spacing: var(--typo-body-body01-letter-spacing);
+  }
+  
+  .typo-body-02-m {
+    font-family: var(--typo-body-body02-m-font-family);
+    font-size: var(--typo-body-body02-m-font-size);
+    font-weight: var(--typo-body-body02-m-font-weight);
+    line-height: var(--typo-body-body02-m-line-height);
+    letter-spacing: var(--typo-body-body02-m-letter-spacing);
+  }
+  
+  .typo-body-03 {
+    font-family: var(--typo-body-body03-font-family);
+    font-size: var(--typo-body-body03-font-size);
+    font-weight: var(--typo-body-body03-font-weight);
+    line-height: var(--typo-body-body03-line-height);
+    letter-spacing: var(--typo-body-body03-letter-spacing);
+  }
+  
+  .typo-body-01-regular {
+    font-family: var(--typo-body-body01-regular-font-family);
+    font-size: var(--typo-body-body01-regular-font-size);
+    font-weight: var(--typo-body-body01-regular-font-weight);
+    line-height: var(--typo-body-body01-regular-line-height);
+    letter-spacing: var(--typo-body-body01-regular-letter-spacing);
+  }
+  
+  .typo-body-02-s {
+    font-family: var(--typo-body-body02-s-font-family);
+    font-size: var(--typo-body-body02-s-font-size);
+    font-weight: var(--typo-body-body02-s-font-weight);
+    line-height: var(--typo-body-body02-s-line-height);
+    letter-spacing: var(--typo-body-body02-s-letter-spacing);
+  }
+  
+  .typo-body-03-regular {
+    font-family: var(--typo-body-body03-regular-font-family);
+    font-size: var(--typo-body-body03-regular-font-size);
+    font-weight: var(--typo-body-body03-regular-font-weight);
+    line-height: var(--typo-body-body03-regular-line-height);
+    letter-spacing: var(--typo-body-body03-regular-letter-spacing);
+  }
+
+  /* Caption Typography */
+  .typo-caption-01 {
+    font-family: var(--typo-caption-caption01-font-family);
+    font-size: var(--typo-caption-caption01-font-size);
+    font-weight: var(--typo-caption-caption01-font-weight);
+    line-height: var(--typo-caption-caption01-line-height);
+    letter-spacing: var(--typo-caption-caption01-letter-spacing);
+  }
+  
+  .typo-caption-02-m {
+    font-family: var(--typo-caption-caption02-m-font-family);
+    font-size: var(--typo-caption-caption02-m-font-size);
+    font-weight: var(--typo-caption-caption02-m-font-weight);
+    line-height: var(--typo-caption-caption02-m-line-height);
+    letter-spacing: var(--typo-caption-caption02-m-letter-spacing);
+  }
+  
+  .typo-caption-02-s {
+    font-family: var(--typo-caption-caption02-s-font-family);
+    font-size: var(--typo-caption-caption02-s-font-size);
+    font-weight: var(--typo-caption-caption02-s-font-weight);
+    line-height: var(--typo-caption-caption02-s-line-height);
+    letter-spacing: var(--typo-caption-caption02-s-letter-spacing);
+  }
+  
+  .typo-caption-03 {
+    font-family: var(--typo-caption-caption03-font-family);
+    font-size: var(--typo-caption-caption03-font-size);
+    font-weight: var(--typo-caption-caption03-font-weight);
+    line-height: var(--typo-caption-caption03-line-height);
+    letter-spacing: var(--typo-caption-caption03-letter-spacing);
+  }
+
+  /* English Typography */
+  .typo-english-web-headline-01 {
+    font-family: var(--typo-english-web-headline-headline01-font-family);
+    font-size: var(--typo-english-web-headline-headline01-font-size);
+    font-weight: var(--typo-english-web-headline-headline01-font-weight);
+    line-height: var(--typo-english-web-headline-headline01-line-height);
+    letter-spacing: var(--typo-english-web-headline-headline01-letter-spacing);
+  }
+  
+  .typo-english-web-headline-02 {
+    font-family: var(--typo-english-web-headline-headline02-font-family);
+    font-size: var(--typo-english-web-headline-headline02-font-size);
+    font-weight: var(--typo-english-web-headline-headline02-font-weight);
+    line-height: var(--typo-english-web-headline-headline02-line-height);
+    letter-spacing: var(--typo-english-web-headline-headline02-letter-spacing);
+  }
+  
+  .typo-english-web-headline-03 {
+    font-family: var(--typo-english-web-headline-headline03-font-family);
+    font-size: var(--typo-english-web-headline-headline03-font-size);
+    font-weight: var(--typo-english-web-headline-headline03-font-weight);
+    line-height: var(--typo-english-web-headline-headline03-line-height);
+    letter-spacing: var(--typo-english-web-headline-headline03-letter-spacing);
+  }
+
+  /* Font family utilities */
+  .font-korean { font-family: var(--typo-font-korean); }
+  .font-english { font-family: var(--typo-font-english); }
+  .font-system { font-family: var(--typo-font-system); }
 }
 
 /* ===== COMPONENT STYLES ===== */
