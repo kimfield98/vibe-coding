@@ -1,0 +1,227 @@
+/* Base Button Styles */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Pretendard Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  box-sizing: border-box;
+  white-space: nowrap;
+  user-select: none;
+  outline: none;
+  overflow: hidden;
+}
+
+.button:focus-visible {
+  outline: 2px solid #007AFF;
+  outline-offset: 2px;
+}
+
+/* Active state removed to comply with animation rules */
+
+/* Size Variants */
+.button--small {
+  height: 32px;
+  padding: 0 12px;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+}
+
+.button--medium {
+  height: 40px;
+  padding: 0 16px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+}
+
+.button--large {
+  height: 48px;
+  padding: 0 24px;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.18px;
+}
+
+/* Primary Variant - Light Theme */
+.button--primary.button--light {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.button--primary.button--light:hover:not(:disabled) {
+  background-color: #333333;
+}
+
+.button--primary.button--light:active:not(:disabled) {
+  background-color: #1a1a1a;
+}
+
+/* Primary Variant - Dark Theme */
+.button--primary.button--dark {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.button--primary.button--dark:hover:not(:disabled) {
+  background-color: #f0f0f0;
+}
+
+.button--primary.button--dark:active:not(:disabled) {
+  background-color: #e0e0e0;
+}
+
+/* Secondary Variant - Light Theme */
+.button--secondary.button--light {
+  background-color: transparent;
+  color: #000000;
+  border: 1px solid #e0e0e0;
+}
+
+.button--secondary.button--light:hover:not(:disabled) {
+  background-color: #f8f8f8;
+  border-color: #d0d0d0;
+}
+
+.button--secondary.button--light:active:not(:disabled) {
+  background-color: #f0f0f0;
+  border-color: #c0c0c0;
+}
+
+/* Secondary Variant - Dark Theme */
+.button--secondary.button--dark {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #404040;
+}
+
+.button--secondary.button--dark:hover:not(:disabled) {
+  background-color: #1a1a1a;
+  border-color: #505050;
+}
+
+.button--secondary.button--dark:active:not(:disabled) {
+  background-color: #2a2a2a;
+  border-color: #606060;
+}
+
+/* Tertiary Variant - Light Theme */
+.button--tertiary.button--light {
+  background-color: transparent;
+  color: #666666;
+}
+
+.button--tertiary.button--light:hover:not(:disabled) {
+  background-color: #f8f8f8;
+  color: #000000;
+}
+
+.button--tertiary.button--light:active:not(:disabled) {
+  background-color: #f0f0f0;
+  color: #000000;
+}
+
+/* Tertiary Variant - Dark Theme */
+.button--tertiary.button--dark {
+  background-color: transparent;
+  color: #999999;
+}
+
+.button--tertiary.button--dark:hover:not(:disabled) {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.button--tertiary.button--dark:active:not(:disabled) {
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+
+/* Disabled State */
+.button--disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+/* Disabled hover state - no transform needed */
+
+/* Icon Styles */
+.button--with-icon {
+  gap: 8px;
+}
+
+.button__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.button__text {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Small size icon adjustments */
+.button--small .button__icon {
+  width: 16px;
+  height: 16px;
+}
+
+.button--small.button--with-icon {
+  gap: 6px;
+}
+
+/* Medium size icon adjustments */
+.button--medium .button__icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Large size icon adjustments */
+.button--large .button__icon {
+  width: 24px;
+  height: 24px;
+}
+
+.button--large.button--with-icon {
+  gap: 10px;
+}
+
+/* Loading state (for future enhancement) */
+.button--loading {
+  pointer-events: none;
+}
+
+.button--loading .button__text {
+  opacity: 0.7;
+}
+
+/* Full width variant (for future enhancement) */
+.button--full-width {
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .button--large {
+    height: 44px;
+    font-size: 16px;
+  }
+  
+  .button--medium {
+    height: 36px;
+    font-size: 14px;
+  }
+  
+  .button--small {
+    height: 32px;
+    font-size: 13px;
+  }
+}
