@@ -1,0 +1,449 @@
+/* Base Pagination Styles */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Pretendard Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  user-select: none;
+}
+
+.paginationContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.paginationNumbers {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Base Button Styles */
+.paginationButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 500;
+  text-decoration: none;
+  box-sizing: border-box;
+  white-space: nowrap;
+  outline: none;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+  border-radius: 8px;
+}
+
+.paginationButton:focus-visible {
+  outline: 2px solid #007AFF;
+  outline-offset: 2px;
+}
+
+/* Button Types */
+.paginationButton__page {
+  min-width: 32px;
+}
+
+.paginationButton__navigation {
+  padding: 0;
+}
+
+/* Size Variants */
+.paginationButton--small {
+  height: 24px;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+}
+
+.paginationButton--small.paginationButton__page {
+  min-width: 24px;
+  padding: 0 6px;
+}
+
+.paginationButton--small.paginationButton__navigation {
+  width: 24px;
+  height: 24px;
+}
+
+.paginationButton--medium {
+  height: 32px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+}
+
+.paginationButton--medium.paginationButton__page {
+  min-width: 32px;
+  padding: 0 8px;
+}
+
+.paginationButton--medium.paginationButton__navigation {
+  width: 32px;
+  height: 32px;
+}
+
+.paginationButton--large {
+  height: 40px;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.18px;
+}
+
+.paginationButton--large.paginationButton__page {
+  min-width: 40px;
+  padding: 0 12px;
+}
+
+.paginationButton--large.paginationButton__navigation {
+  width: 40px;
+  height: 40px;
+}
+
+/* Primary Variant - Light Theme */
+.paginationButton--primary.paginationButton--light {
+  background-color: #FFFFFF;
+  color: #777777;
+  border: 1px solid transparent;
+}
+
+.paginationButton--primary.paginationButton--light:hover:not(:disabled):not(.paginationButton--active) {
+  background-color: #F8F8FA;
+  color: #333333;
+}
+
+.paginationButton--primary.paginationButton--light:active:not(:disabled):not(.paginationButton--active) {
+  background-color: #F2F2F2;
+  color: #000000;
+}
+
+.paginationButton--primary.paginationButton--light.paginationButton--active {
+  background-color: #F2F2F2;
+  color: #000000;
+  font-weight: 500;
+}
+
+/* Primary Variant - Dark Theme */
+.paginationButton--primary.paginationButton--dark {
+  background-color: #333333;
+  color: #ABABAB;
+  border: 1px solid transparent;
+}
+
+.paginationButton--primary.paginationButton--dark:hover:not(:disabled):not(.paginationButton--active) {
+  background-color: #404040;
+  color: #FFFFFF;
+}
+
+.paginationButton--primary.paginationButton--dark:active:not(:disabled):not(.paginationButton--active) {
+  background-color: #505050;
+  color: #FFFFFF;
+}
+
+.paginationButton--primary.paginationButton--dark.paginationButton--active {
+  background-color: #5F5F5F;
+  color: #FFFFFF;
+  font-weight: 500;
+}
+
+/* Secondary Variant - Light Theme */
+.paginationButton--secondary.paginationButton--light {
+  background-color: transparent;
+  color: #777777;
+  border: 1px solid #E4E4E4;
+}
+
+.paginationButton--secondary.paginationButton--light:hover:not(:disabled):not(.paginationButton--active) {
+  background-color: #F8F8FA;
+  color: #333333;
+  border-color: #D4D3D3;
+}
+
+.paginationButton--secondary.paginationButton--light:active:not(:disabled):not(.paginationButton--active) {
+  background-color: #F2F2F2;
+  color: #000000;
+  border-color: #C7C7C7;
+}
+
+.paginationButton--secondary.paginationButton--light.paginationButton--active {
+  background-color: #6DA5FA;
+  color: #FFFFFF;
+  border-color: #6DA5FA;
+  font-weight: 500;
+}
+
+/* Secondary Variant - Dark Theme */
+.paginationButton--secondary.paginationButton--dark {
+  background-color: transparent;
+  color: #ABABAB;
+  border: 1px solid #5F5F5F;
+}
+
+.paginationButton--secondary.paginationButton--dark:hover:not(:disabled):not(.paginationButton--active) {
+  background-color: #333333;
+  color: #FFFFFF;
+  border-color: #777777;
+}
+
+.paginationButton--secondary.paginationButton--dark:active:not(:disabled):not(.paginationButton--active) {
+  background-color: #404040;
+  color: #FFFFFF;
+  border-color: #919191;
+}
+
+.paginationButton--secondary.paginationButton--dark.paginationButton--active {
+  background-color: #497CFF;
+  color: #FFFFFF;
+  border-color: #497CFF;
+  font-weight: 500;
+}
+
+/* Tertiary Variant - Light Theme */
+.paginationButton--tertiary.paginationButton--light {
+  background-color: transparent;
+  color: #777777;
+  border: none;
+}
+
+.paginationButton--tertiary.paginationButton--light:hover:not(:disabled):not(.paginationButton--active) {
+  background-color: #F8F8FA;
+  color: #333333;
+}
+
+.paginationButton--tertiary.paginationButton--light:active:not(:disabled):not(.paginationButton--active) {
+  background-color: #F2F2F2;
+  color: #000000;
+}
+
+.paginationButton--tertiary.paginationButton--light.paginationButton--active {
+  background-color: transparent;
+  color: #6DA5FA;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Tertiary Variant - Dark Theme */
+.paginationButton--tertiary.paginationButton--dark {
+  background-color: transparent;
+  color: #ABABAB;
+  border: none;
+}
+
+.paginationButton--tertiary.paginationButton--dark:hover:not(:disabled):not(.paginationButton--active) {
+  background-color: #333333;
+  color: #FFFFFF;
+}
+
+.paginationButton--tertiary.paginationButton--dark:active:not(:disabled):not(.paginationButton--active) {
+  background-color: #404040;
+  color: #FFFFFF;
+}
+
+.paginationButton--tertiary.paginationButton--dark.paginationButton--active {
+  background-color: transparent;
+  color: #497CFF;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Disabled State */
+.paginationButton--disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.paginationButton--disabled:hover {
+  background-color: inherit;
+  color: inherit;
+  border-color: inherit;
+}
+
+/* Ellipsis Styles */
+.paginationEllipsis {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  min-width: 32px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+  user-select: none;
+}
+
+.paginationEllipsis--light {
+  color: #777777;
+}
+
+.paginationEllipsis--dark {
+  color: #ABABAB;
+}
+
+/* Size-specific ellipsis adjustments */
+.pagination--small .paginationEllipsis {
+  height: 24px;
+  min-width: 24px;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+}
+
+.pagination--large .paginationEllipsis {
+  height: 40px;
+  min-width: 40px;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.18px;
+}
+
+/* Navigation button icon styles */
+.paginationButton__navigation svg {
+  width: 100%;
+  height: 100%;
+  max-width: 20px;
+  max-height: 20px;
+}
+
+.paginationButton--small.paginationButton__navigation svg {
+  max-width: 16px;
+  max-height: 16px;
+}
+
+.paginationButton--large.paginationButton__navigation svg {
+  max-width: 24px;
+  max-height: 24px;
+}
+
+/* Pagination container variants */
+.pagination--disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .paginationContainer {
+    gap: 4px;
+  }
+  
+  .paginationNumbers {
+    gap: 4px;
+  }
+  
+  .paginationButton--large {
+    height: 36px;
+    font-size: 16px;
+  }
+  
+  .paginationButton--large.paginationButton__page {
+    min-width: 36px;
+    padding: 0 10px;
+  }
+  
+  .paginationButton--large.paginationButton__navigation {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .paginationButton--medium {
+    height: 32px;
+    font-size: 14px;
+  }
+  
+  .paginationButton--medium.paginationButton__page {
+    min-width: 32px;
+    padding: 0 6px;
+  }
+  
+  .paginationButton--medium.paginationButton__navigation {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .paginationButton--small {
+    height: 28px;
+    font-size: 13px;
+  }
+  
+  .paginationButton--small.paginationButton__page {
+    min-width: 28px;
+    padding: 0 4px;
+  }
+  
+  .paginationButton--small.paginationButton__navigation {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .pagination--large .paginationEllipsis {
+    height: 36px;
+    min-width: 36px;
+    font-size: 16px;
+  }
+  
+  .pagination--medium .paginationEllipsis {
+    height: 32px;
+    min-width: 32px;
+    font-size: 14px;
+  }
+  
+  .pagination--small .paginationEllipsis {
+    height: 28px;
+    min-width: 28px;
+    font-size: 13px;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .paginationButton--primary.paginationButton--light {
+    border: 1px solid #000000;
+  }
+  
+  .paginationButton--primary.paginationButton--dark {
+    border: 1px solid #FFFFFF;
+  }
+  
+  .paginationButton--tertiary.paginationButton--light.paginationButton--active {
+    background-color: #000000;
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+  
+  .paginationButton--tertiary.paginationButton--dark.paginationButton--active {
+    background-color: #FFFFFF;
+    color: #000000;
+    text-decoration: none;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .paginationButton {
+    transition: none;
+  }
+}
+
+/* Focus styles for better accessibility */
+.paginationButton:focus-visible {
+  outline: 2px solid #6DA5FA;
+  outline-offset: 2px;
+}
+
+.paginationButton--dark:focus-visible {
+  outline-color: #497CFF;
+}
+
+/* Print styles */
+@media print {
+  .pagination {
+    display: none;
+  }
+}
