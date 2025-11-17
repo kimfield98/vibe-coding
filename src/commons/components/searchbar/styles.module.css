@@ -1,0 +1,390 @@
+/**
+ * SearchBar Component Styles
+ * Figma 디자인을 기반으로 한 검색바 컴포넌트 스타일
+ * variant: primary, secondary, tertiary
+ * size: small, medium, large  
+ * theme: light, dark
+ */
+
+/* ===== BASE CONTAINER STYLES ===== */
+.container {
+  display: inline-flex;
+  flex-direction: column;
+  width: auto;
+}
+
+.container--full-width {
+  width: 100%;
+}
+
+/* ===== INPUT WRAPPER STYLES ===== */
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  border-radius: 100px; /* Figma 디자인의 완전한 둥근 모양 */
+  border: 1px solid;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.inputWrapper:focus-within {
+  outline: 2px solid;
+  outline-offset: 2px;
+}
+
+/* ===== SIZE VARIANTS ===== */
+.inputWrapper--small {
+  height: 36px;
+  padding: 0 12px;
+}
+
+.inputWrapper--medium {
+  height: 48px; /* Figma 디자인 기준 */
+  padding: 0 16px;
+}
+
+.inputWrapper--large {
+  height: 56px;
+  padding: 0 20px;
+}
+
+/* ===== PRIMARY VARIANT ===== */
+.inputWrapper--primary.inputWrapper--light {
+  border-color: #c7c7c7; /* Figma 디자인 기준 */
+  background-color: #ffffff;
+}
+
+.inputWrapper--primary.inputWrapper--light:hover {
+  border-color: #ababab;
+}
+
+.inputWrapper--primary.inputWrapper--light:focus-within {
+  border-color: #6da5fa;
+  outline-color: #6da5fa;
+}
+
+.inputWrapper--primary.inputWrapper--dark {
+  border-color: #777777;
+  background-color: #1c1c1c;
+}
+
+.inputWrapper--primary.inputWrapper--dark:hover {
+  border-color: #919191;
+}
+
+.inputWrapper--primary.inputWrapper--dark:focus-within {
+  border-color: #497cff;
+  outline-color: #497cff;
+}
+
+/* ===== SECONDARY VARIANT ===== */
+.inputWrapper--secondary.inputWrapper--light {
+  border-color: #d4d3d3;
+  background-color: #f2f2f2;
+}
+
+.inputWrapper--secondary.inputWrapper--light:hover {
+  border-color: #c7c7c7;
+  background-color: #e4e4e4;
+}
+
+.inputWrapper--secondary.inputWrapper--light:focus-within {
+  border-color: #6da5fa;
+  background-color: #ffffff;
+  outline-color: #6da5fa;
+}
+
+.inputWrapper--secondary.inputWrapper--dark {
+  border-color: #5f5f5f;
+  background-color: #333333;
+}
+
+.inputWrapper--secondary.inputWrapper--dark:hover {
+  border-color: #777777;
+  background-color: #5f5f5f;
+}
+
+.inputWrapper--secondary.inputWrapper--dark:focus-within {
+  border-color: #497cff;
+  background-color: #1c1c1c;
+  outline-color: #497cff;
+}
+
+/* ===== TERTIARY VARIANT ===== */
+.inputWrapper--tertiary.inputWrapper--light {
+  border-color: transparent;
+  background-color: #f2f2f2;
+}
+
+.inputWrapper--tertiary.inputWrapper--light:hover {
+  background-color: #e4e4e4;
+}
+
+.inputWrapper--tertiary.inputWrapper--light:focus-within {
+  border-color: #6da5fa;
+  background-color: #ffffff;
+  outline-color: #6da5fa;
+}
+
+.inputWrapper--tertiary.inputWrapper--dark {
+  border-color: transparent;
+  background-color: #333333;
+}
+
+.inputWrapper--tertiary.inputWrapper--dark:hover {
+  background-color: #5f5f5f;
+}
+
+.inputWrapper--tertiary.inputWrapper--dark:focus-within {
+  border-color: #497cff;
+  background-color: #1c1c1c;
+  outline-color: #497cff;
+}
+
+/* ===== DISABLED STATE ===== */
+.inputWrapper--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.inputWrapper--readonly {
+  cursor: default;
+}
+
+/* ===== INPUT STYLES ===== */
+.input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: 'Pretendard Variable', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.16px; /* Figma 디자인 기준 */
+}
+
+.input::placeholder {
+}
+
+/* ===== INPUT SIZE VARIANTS ===== */
+.input--small {
+  font-size: 14px;
+  line-height: 20px;
+  padding: 0 8px;
+}
+
+.input--medium {
+  font-size: 16px; /* Figma 디자인 기준 */
+  line-height: 24px; /* Figma 디자인 기준 */
+  padding: 0 12px;
+}
+
+.input--large {
+  font-size: 18px;
+  line-height: 26px;
+  padding: 0 16px;
+}
+
+/* ===== INPUT THEME VARIANTS ===== */
+.input--light {
+  color: #000000;
+}
+
+.input--light::placeholder {
+  color: #ababab; /* Figma 디자인 기준 */
+}
+
+.input--dark {
+  color: #ffffff;
+}
+
+.input--dark::placeholder {
+  color: #777777;
+}
+
+/* ===== ICON ADJUSTMENTS ===== */
+.input--with-search-icon {
+  padding-left: 0;
+}
+
+.input--with-clear-button {
+  padding-right: 0;
+}
+
+.inputWrapper--with-search-icon {
+  padding-left: 16px;
+}
+
+.inputWrapper--with-clear-button {
+  padding-right: 16px;
+}
+
+.inputWrapper--small.inputWrapper--with-search-icon {
+  padding-left: 12px;
+}
+
+.inputWrapper--small.inputWrapper--with-clear-button {
+  padding-right: 12px;
+}
+
+.inputWrapper--large.inputWrapper--with-search-icon {
+  padding-left: 20px;
+}
+
+.inputWrapper--large.inputWrapper--with-clear-button {
+  padding-right: 20px;
+}
+
+/* ===== SEARCH ICON STYLES ===== */
+.searchIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.searchIcon:hover {
+  opacity: 0.8;
+}
+
+.searchIcon:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.searchIcon svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* ===== SEARCH ICON THEME VARIANTS ===== */
+.container--light .searchIcon {
+  color: #777777;
+}
+
+.container--dark .searchIcon {
+  color: #ababab;
+}
+
+/* ===== CLEAR BUTTON STYLES ===== */
+.clearButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  margin-left: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.clearButton:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.clearButton svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* ===== CLEAR BUTTON THEME VARIANTS ===== */
+.container--light .clearButton {
+  color: #ababab;
+}
+
+.container--light .clearButton:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.container--dark .clearButton {
+  color: #777777;
+}
+
+.container--dark .clearButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ===== SIZE-SPECIFIC ICON ADJUSTMENTS ===== */
+.container--small .searchIcon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.container--small .clearButton svg {
+  width: 14px;
+  height: 14px;
+}
+
+.container--large .searchIcon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.container--large .clearButton svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+  
+  .inputWrapper--medium {
+    height: 44px;
+  }
+  
+  .inputWrapper--large {
+    height: 52px;
+  }
+}
+
+/* ===== ACCESSIBILITY ===== */
+@media (prefers-reduced-motion: reduce) {
+  /* No transitions to disable since we don't use any */
+}
+
+/* ===== HIGH CONTRAST MODE ===== */
+@media (prefers-contrast: high) {
+  .inputWrapper--primary.inputWrapper--light {
+    border-color: #000000;
+  }
+  
+  .inputWrapper--primary.inputWrapper--dark {
+    border-color: #ffffff;
+  }
+  
+  .input--light::placeholder {
+    color: #666666;
+  }
+  
+  .input--dark::placeholder {
+    color: #999999;
+  }
+}
+
+/* ===== FOCUS VISIBLE ===== */
+.searchIcon:focus-visible,
+.clearButton:focus-visible {
+  outline: 2px solid;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.container--light .searchIcon:focus-visible,
+.container--light .clearButton:focus-visible {
+  outline-color: #6da5fa;
+}
+
+.container--dark .searchIcon:focus-visible,
+.container--dark .clearButton:focus-visible {
+  outline-color: #497cff;
+}
