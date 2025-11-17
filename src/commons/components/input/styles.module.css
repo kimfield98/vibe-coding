@@ -176,19 +176,19 @@
 
 /* Error State */
 .inputWrapper--error.inputWrapper--light {
-  border-color: #F03851 !important;
+  border-color: #F03851;
 }
 
 .inputWrapper--error.inputWrapper--light:focus-within {
-  outline-color: #F03851 !important;
+  outline-color: #F03851;
 }
 
 .inputWrapper--error.inputWrapper--dark {
-  border-color: #E4112E !important;
+  border-color: #E4112E;
 }
 
 .inputWrapper--error.inputWrapper--dark:focus-within {
-  outline-color: #E4112E !important;
+  outline-color: #E4112E;
 }
 
 /* Disabled State */
@@ -198,8 +198,8 @@
 }
 
 .inputWrapper--disabled:hover {
-  border-color: inherit !important;
-  background-color: inherit !important;
+  border-color: inherit;
+  background-color: inherit;
 }
 
 /* Readonly State */
@@ -208,7 +208,7 @@
 }
 
 .inputWrapper--readonly:hover {
-  border-color: inherit !important;
+  border-color: inherit;
 }
 
 /* Icon Adjustments */
